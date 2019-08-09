@@ -1,0 +1,24 @@
+  <swiper  autoplay="{{autoplay}}" interval="{{interval}}" circular previous-margin="{{leftMargin}}" next-margin="{{rightMargin}}" bindchange="handleChange">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item.url}}" class="slide-image {{currentIndex == index ? 'active': ''}}"/>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="{{currentIndex == 0 ? 'show':'hidden'}}">
+    <scroll-view>
+      <text>暂无内容1</text>
+    </scroll-view>
+  </view>
+  <view class="{{currentIndex == 1 ? 'show':'hidden'}}">
+    <scroll-view>
+      <text>暂无内容2</text>
+    </scroll-view>
+  </view>
+  <view class="{{currentIndex == 2 ? 'show':'hidden'}}">
+    <scroll-view>
+      <text>暂无内容3</text>
+    </scroll-view>
+  </view>
+  
